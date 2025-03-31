@@ -131,3 +131,40 @@ export const services = [
     name: "Staff Augmentation",
   },
 ];
+
+export const expertise = [
+  {
+    id: 1,
+    header: "Iot Services",
+    image: "https://yalantis.com/wp-content/uploads/2025/02/iot-services.webp",
+    text: "Our custom IoT solutions bridge the gap between hardware and software with real-time data collection, automation, and advanced analytics.",
+  },
+  {
+    id: 2,
+    header: "Data engineering",
+    image:
+      "https://yalantis.com/wp-content/uploads/2025/02/data-engineering.webp",
+    text: "Build robust data architectures that efficiently collect, store, and process massive datasets, enabling you to make business decisions with confidence.",
+  },
+  {
+    id: 3,
+    header: "AI development",
+    image:
+      "https://yalantis.com/wp-content/uploads/2025/02/ai-development.webp",
+    text: "Enhance automation, optimize operations, and get a deep-dive prescriptive and predictive analysis of cross-company data with reliable and ethical AI solutions.",
+  },
+  {
+    id: 4,
+    header: "Business intelligence",
+    image:
+      "https://yalantis.com/wp-content/uploads/2025/02/business-intelligence-1.webp",
+    text: "Transform raw data into a clear data-driven strategy with advanced analytics, interactive dashboards, and real-time reporting.",
+  },
+  {
+    id: 5,
+    header: "ML development",
+    image:
+      "https://yalantis.com/wp-content/uploads/2025/02/ml-intelligence.webp",
+    text: "Automate complex processes, uncover hidden patterns, and use scalable ML models that adapt to your business needs to drive growth.",
+  },
+];

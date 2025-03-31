@@ -1,5 +1,9 @@
 import React, { useState } from "react";
-import { services } from "../../static/bannerData";
+import { expertise, services } from "../../static/bannerData";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Autoplay } from "swiper/modules";
 
 const Services = () => {
   const [active, setActive] = useState(1);
@@ -162,6 +166,61 @@ const Services = () => {
                 </div>
               )}
             </div>
+          </div>
+        </div>
+        <div className="my-10">
+          <h3 className="text-3xl mb-3 font-bold text-[#000]">
+            Techbridge scope of expertise
+          </h3>
+          <div className="">
+            <Swiper
+              autoplay={{
+                delay: 1500,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                320: { slidesPerView: 1, spaceBetween: 10 },
+                640: { slidesPerView: 1, spaceBetween: 15 },
+                768: { slidesPerView: 2, spaceBetween: 20 },
+                1024: { slidesPerView: 2, spaceBetween: 5 },
+                1280: { slidesPerView: 3, spaceBetween: 30 },
+              }}
+              modules={[Autoplay]}
+              className="mySwiper"
+            >
+              {expertise.map((item) => {
+                return (
+                  <SwiperSlide key={item.id}>
+                    <div className="border relative border-gray-300 rounded-lg cursor-pointer h-[520px] group overflow-hidden">
+                      {/* Initial Text Content */}
+                      <div
+                        className="p-4 relative z-10 transition-all duration-500 group-hover:absolute group-hover:w-full 
+                        group-hover:h-full group-hover:flex group-hover:flex-col group-hover:items-center
+                        group-hover:bg-black/50 group-hover:text-white group-hover:mx-auto group-hover:justify-center"
+                      >
+                        <h4 className="text-lg font-bold pb-4 group-hover:text-2xl group-hover:font-semibold">
+                          {item.header}
+                        </h4>
+                        <p className="text-sm leading-7 group-hover:text-center group-hover:w-[70%] group-hover:mx-auto newsreader group-hover:text-base group-hover:font-normal">
+                          {item.text}
+                        </p>
+                      </div>
+
+                      {/* Image that expands on hover */}
+                      <div
+                        className="w-full h-[300px] absolute bottom-0 left-0 transition-all duration-500 
+                        group-hover:h-full group-hover:top-0"
+                      >
+                        <img
+                          src={item.image}
+                          className="w-full h-full object-cover rounded-bl-lg rounded-br-lg transition-all duration-500"
+                        />
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
           </div>
         </div>
       </div>
