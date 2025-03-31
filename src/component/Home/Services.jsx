@@ -169,7 +169,7 @@ const Services = () => {
           </div>
         </div>
         <div className="my-10 mx-auto w-[88%]">
-          <h3 className="text-3xl mb-3 font-bold text-[#000]">
+          <h3 className="text-3xl mb-3 pt-10 font-bold text-[#000]">
             Techbridge scope of expertise
           </h3>
           <div className="">

@@ -3,6 +3,7 @@ import Banner from "./Banner";
 import Mission from "./Mission";
 import Services from "./Services";
 import Portfolio from "./Portfolio";
+import Testimonial from "./Testimonial";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Mission />
       <Services />
       <Portfolio />
+      <Testimonial />
     </React.Fragment>
   );
 };

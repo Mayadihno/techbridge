@@ -236,3 +236,86 @@ export const portfolio = [
     text: "Our telecom solutions optimize network performance, enhance customer experiences, and enable seamless communication through advanced analytics and IoT integration.",
   },
 ];
+
+export const testimonial = [
+  {
+    id: 1,
+    image:
+      "https://images.pexels.com/photos/3184611/pexels-photo-3184611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Simon Jones",
+    position: "CIO in Healthcare",
+    text: "“TechBridge has been a great fit for us because of their experience, responsiveness, value, and time to market. From the very start, they’ve been able to staff an effective development team in no time and perform as expected.”",
+  },
+  {
+    id: 2,
+    image:
+      "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Sérgio Miguel Vieira",
+    position: "Founder and CEO",
+    text: "“What fascinated me the most is how invested the TechBridge development team is, and how they often exceeded expectations in what we were trying to accomplish in terms of timeframes.”",
+  },
+  {
+    id: 3,
+    image:
+      "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Sergei Lishchenko",
+    position: "Director of Digital Experience",
+    text: "“They have very good organization and project management expertise. We’re not just getting the developers, we’re getting a whole support structure. Also, TechBridge cares about their employee satisfaction. And with satisfied employees, we get much better output.”",
+  },
+  {
+    id: 4,
+    image:
+      "https://images.pexels.com/photos/8197513/pexels-photo-8197513.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Roy",
+    position: "Partner at RAKwireless",
+    text: "“What triggered us was their remote collaboration practices as well as their experience in the IoT industry. Their strong technical experience helped us scale our platform and deliver great performance to our customers.”",
+  },
+  {
+    id: 5,
+    image:
+      "https://images.pexels.com/photos/3785104/pexels-photo-3785104.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Ron Bullis",
+    position: "President and Founder at Lifeworks",
+    text: "“One of the biggest values they bring to the table is the way of thinking critically during the whole development process. They’re not just building software, they’re effectively solving your business problem.”",
+  },
+  {
+    id: 6,
+    image:
+      "https://images.pexels.com/photos/13801851/pexels-photo-13801851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Mark Boudreau",
+    position: "Founder and COO at Healthfully",
+    text: "“TechBridge has been a great fit for us because of their experience, responsiveness, value, and time to market. From the very start, they’ve been able to staff an effective development team in no time and perform as expected.”",
+  },
+  {
+    id: 7,
+    image:
+      "https://images.pexels.com/photos/8617757/pexels-photo-8617757.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    name: "Ken Yu",
+    position: "CEO at RAKwireless",
+    text: "“Established development flows and good communication skills made collaboration with TechBridge very smooth. We appreciate their professionalism and dedication. If you are looking for a solid technical partner and a well-processed software outsourcing company for your project, I’d recommend TechBridge.”",
+  },
+  {
+    id: 8,
+    image:
+      "https://images.pexels.com/photos/6333507/pexels-photo-6333507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Andrew Gazdecki",
+    position: "CEO at MicroAcquire",
+    text: "“Working with TechBridge, you get their breadth of experience building hundreds of projects. Their expertise and knowledge were second to none. And that makes the difference between a good product and a great product.”",
+  },
+  {
+    id: 9,
+    image:
+      "https://images.pexels.com/photos/3776201/pexels-photo-3776201.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    name: "Alejandro Resendiz",
+    position: "General manager at 123 Sourcing",
+    text: "“With the product built by TechBridge, we have a lot of possibilities for growth. They elaborated a great user experience for our operators to work more efficiently and properly deal with troubleshooting. And the architecture of the product is scalable and ready for the future.”",
+  },
+  {
+    id: 10,
+    image:
+      "https://images.pexels.com/photos/13999482/pexels-photo-13999482.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    name: "Alexey Shulgin",
+    position: "CEO at Goodline",
+    text: "“TechBridge is a great place to work. We have a very strong culture of collaboration and mutual support. We are always ready to help each other, and we are always ready to share our knowledge.”",
+  },
+];
