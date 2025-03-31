@@ -4,7 +4,7 @@ import { navbarData } from "./data";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white text-gray-900 p-4 shadow-md sticky w-full z-10">
+    <nav className="bg-white text-gray-900 p-4 sticky top-0 z-50 shadow-md w-full">
       <div className="w-[90%] mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center space-x-2">

@@ -35,7 +35,7 @@ const Banner = () => {
               }}
             >
               {/* Gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-zinc-500 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-transparent"></div>
 
               {/* Text Content */}
               <div className="relative z-10 ml-28 space-y-4">
