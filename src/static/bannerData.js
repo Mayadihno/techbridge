@@ -168,3 +168,71 @@ export const expertise = [
     text: "Automate complex processes, uncover hidden patterns, and use scalable ML models that adapt to your business needs to drive growth.",
   },
 ];
+
+export const portfolio = [
+  {
+    id: 1,
+    header: "FinTech",
+    image: "https://yalantis.com/wp-content/uploads/2025/02/fintech-1.webp",
+    text: "We develop secure, scalable, and compliant FinTech solutions that enhance digital banking, payment processing, risk management, and financial analytics.",
+  },
+  {
+    id: 2,
+    header: "Healthcare",
+    image: "https://yalantis.com/wp-content/uploads/2025/02/healthcare-2.webp",
+    text: "Our healthcare solutions improve patient care, streamline workflows, and ensure compliance through AI-driven diagnostics, IoT-enabled devices, and smooth EHR integration",
+  },
+  {
+    id: 3,
+    header: "Industrial",
+    image: "https://yalantis.com/wp-content/uploads/2025/02/industrial-1.webp",
+    text: "We empower industrial enterprises with smart IoT-driven monitoring, and predictive analytics to optimize production efficiency, safety, and asset management.",
+  },
+  {
+    id: 4,
+    header: "Supply chain",
+    image:
+      "https://yalantis.com/wp-content/uploads/2025/02/supply-chain-1.webp",
+    text: "Our supply chain solutions enhance visibility, automation, and decision-making, ensuring resilience, cost efficiency, and real-time tracking across logistics networks.",
+  },
+  {
+    id: 5,
+    header: "Transportation and mobility",
+    image:
+      "https://yalantis.com/wp-content/uploads/2025/02/transportation-and-mobility-2-1.webp",
+    text: "We create intelligent mobility solutions for fleet management, route optimization, and connected vehicle ecosystems, driving efficiency and sustainability in modern transportation.",
+  },
+
+  {
+    id: 6,
+    header: "Energy",
+    image:
+      "https://images.pexels.com/photos/9889061/pexels-photo-9889061.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    text: "Our energy solutions optimize operations, reduce costs, and improve sustainability, enabling businesses to harness the power of renewable energy, smart grids, and advanced analytics.",
+  },
+  {
+    id: 7,
+    header: "Retail",
+    image: "https://yalantis.com/wp-content/uploads/2025/02/retail-1.webp",
+    text: "We enhance customer experiences and operational efficiency through AI-driven analytics, personalized shopping, and seamless omnichannel integration.",
+  },
+  {
+    id: 8,
+    header: "Media & entertainment",
+    image:
+      "https://yalantis.com/wp-content/uploads/2025/02/media-and-entertainment-1.webp",
+    text: "Our solutions empower media and entertainment companies with data-driven insights, content personalization, and immersive experiences to engage audiences effectively.",
+  },
+  {
+    id: 9,
+    header: "Real estate",
+    image: "https://yalantis.com/wp-content/uploads/2025/02/real-estate-1.webp",
+    text: "We develop innovative solutions for real estate management, property analytics, and virtual tours, enhancing decision-making and user experiences.",
+  },
+  {
+    id: 10,
+    header: "Telecom",
+    image: "https://yalantis.com/wp-content/uploads/2025/02/telecom-1.webp",
+    text: "Our telecom solutions optimize network performance, enhance customer experiences, and enable seamless communication through advanced analytics and IoT integration.",
+  },
+];

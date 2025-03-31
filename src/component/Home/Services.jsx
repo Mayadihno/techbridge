@@ -9,7 +9,7 @@ const Services = () => {
   const [active, setActive] = useState(1);
   return (
     <React.Fragment>
-      <div className="bg-[#F5F5F5] py-16 px-8 rounded-lg shadow-lg">
+      <div className="bg-[#F5F5F5] my-16 p-8 rounded-lg">
         <div className="mx-auto w-[88%]">
           <h2 className="text-5xl font-semibold text-center newsreader leading-[50px] mb-12">
             <span className="text-[#FF6300]">Services</span> offered by
@@ -168,7 +168,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-        <div className="my-10">
+        <div className="my-10 mx-auto w-[88%]">
           <h3 className="text-3xl mb-3 font-bold text-[#000]">
             Techbridge scope of expertise
           </h3>
