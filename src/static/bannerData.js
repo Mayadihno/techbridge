@@ -319,3 +319,170 @@ export const testimonial = [
     text: "“TechBridge is a great place to work. We have a very strong culture of collaboration and mutual support. We are always ready to help each other, and we are always ready to share our knowledge.”",
   },
 ];
+
+export const article = [
+  {
+    id: 1,
+    title: "How TechBridge Transformed Healthcare with Custom Software",
+    description:
+      "Discover how TechBridge developed a robust data management system for a leading healthcare provider, improving efficiency and security.",
+    image:
+      "https://yalantis.com/wp-content/uploads/2021/10/remote-patient-monitoring-solutions-for-healthcare-providers-1.webp",
+    date: "2025-04-01",
+    author: "John Doe",
+    link: "/articles/healthcare-transformation",
+  },
+  {
+    id: 2,
+    title: "The Future of AI-Powered Business Solutions",
+    description:
+      "TechBridge explores the impact of AI on business automation and how companies can leverage AI for growth and efficiency.",
+    image:
+      "https://yalantis.com/wp-content/uploads/2023/07/joshua-sortino-lqkhndzsf-8-unsplash-min-599x400.webp",
+    date: "2025-03-28",
+    author: "Jane Smith",
+    link: "/articles/ai-business-solutions",
+  },
+  {
+    id: 3,
+    title: "Behind the Scenes: TechBridge's Software Development Process",
+    description:
+      "Get an exclusive look into TechBridge's development process, from ideation to deployment.",
+    image:
+      "https://yalantis.com/wp-content/uploads/2024/02/title-image-option-3-2048x1363.webp",
+    date: "2025-03-15",
+    author: "Alex Johnson",
+    link: "/articles/software-development-process",
+  },
+  {
+    id: 4,
+    title: "Cybersecurity Trends in 2025: How Businesses Can Stay Safe",
+    description:
+      "With rising cyber threats, TechBridge shares essential cybersecurity strategies for businesses in 2025.",
+    image:
+      "https://yalantis.com/wp-content/uploads/2023/12/person-using-ai-tool-job-2048x1365.webp",
+    date: "2025-03-10",
+    author: "Michael Lee",
+    link: "/articles/cybersecurity-trends",
+  },
+  {
+    id: 5,
+    title: "Revolutionizing E-Commerce with Custom Development",
+    description:
+      "Learn how TechBridge helps online stores scale with powerful, custom-built e-commerce solutions.",
+    image:
+      "https://yalantis.com/wp-content/uploads/2024/02/title-image-option-2-2048x1365.webp",
+    date: "2025-03-05",
+    author: "Sarah Williams",
+    link: "/articles/ecommerce-solutions",
+  },
+  {
+    id: 6,
+    title: "5G and Its Impact on Business Digitalization",
+    description:
+      "A deep dive into how 5G technology is reshaping industries and enhancing connectivity for businesses worldwide.",
+    image:
+      "https://yalantis.com/wp-content/uploads/2023/11/hand-pointing-currency-blockchain-technology-background-2048x1365.webp",
+    date: "2025-02-25",
+    author: "David Carter",
+    link: "/articles/5g-business-impact",
+  },
+  {
+    id: 7,
+    title: "Cloud Computing: The Backbone of Modern Enterprises",
+    description:
+      "Explore how TechBridge's cloud solutions empower businesses with scalability, security, and flexibility.",
+    image:
+      "https://yalantis.com/wp-content/uploads/2022/04/digital_banking_software_development-600x400.webp",
+    date: "2025-02-18",
+    author: "Emma Brown",
+    link: "/articles/cloud-computing-innovation",
+  },
+  {
+    id: 8,
+    title: "How Fintech is Disrupting the Banking Industry",
+    description:
+      "TechBridge examines the rise of fintech startups and how they are transforming traditional banking systems.",
+    image: "https://example.com/fintech.jpg",
+    date: "2025-02-10",
+    author: "James Miller",
+    link: "/articles/fintech-revolution",
+  },
+  {
+    id: 9,
+    title: "Sustainable Technology: The Future of Green Innovation",
+    description:
+      "How TechBridge is integrating sustainability into technology to drive eco-friendly business solutions.",
+    image:
+      "https://yalantis.com/wp-content/uploads/2024/01/open-banking-1-2048x1366.webp",
+    date: "2025-01-30",
+    author: "Olivia Green",
+    link: "/articles/sustainable-technology",
+  },
+  {
+    id: 10,
+    title: "The Role of Blockchain in Business Security",
+    description:
+      "Discover how blockchain is being used to enhance security and trust in business transactions.",
+    image:
+      "https://yalantis.com/wp-content/uploads/2023/10/bg_solution_hub_announcement-2048x758.webp",
+    date: "2025-01-20",
+    author: "Ethan Wilson",
+    link: "/articles/blockchain-security",
+  },
+  {
+    id: 11,
+    title: "The Future of Remote Work: How TechBridge is Leading the Way",
+    description:
+      "How businesses can leverage technology to support remote work and improve productivity.",
+    image:
+      "https://yalantis.com/wp-content/uploads/2023/04/fraud-detection-software-secure-your-customers-transactions-and-protect-your-reputation.webp",
+    date: "2025-01-10",
+    author: "Sophia Anderson",
+    link: "/articles/remote-work-trends",
+  },
+  {
+    id: 12,
+    title: "Why UI/UX Design is Critical for Business Success",
+    description:
+      "TechBridge explains why user experience and interface design are essential for customer retention and growth.",
+    image:
+      "https://yalantis.com/wp-content/uploads/2024/11/yalantis-bird-partnership_article-preview.png",
+    date: "2024-12-25",
+    author: "Daniel Harris",
+    link: "/articles/ui-ux-design-importance",
+  },
+  {
+    id: 13,
+    title: "The Power of Data Analytics in Decision Making",
+    description:
+      "How data-driven insights are transforming business strategies and operations.",
+    image:
+      "https://yalantis.com/wp-content/uploads/2022/03/logistics_dashboards-1.webp",
+    date: "2024-12-10",
+    author: "Liam Martinez",
+    link: "/articles/data-analytics-impact",
+  },
+  {
+    id: 14,
+    title: "How Startups Can Leverage Technology for Growth",
+    description:
+      "A guide on how emerging businesses can utilize technology to scale and compete in global markets.",
+    image:
+      "https://yalantis.com/wp-content/uploads/2021/11/data-analytics-implementation-strategy.webp",
+    date: "2024-11-30",
+    author: "Charlotte Thomas",
+    link: "/articles/startup-tech-growth",
+  },
+  {
+    id: 15,
+    title: "AI-Powered Chatbots: Enhancing Customer Experience",
+    description:
+      "Explore how AI-driven chatbots are revolutionizing customer support and engagement.",
+    image:
+      "https://yalantis.com/wp-content/uploads/2021/09/robotic-automation.webp",
+    date: "2024-11-15",
+    author: "Benjamin Scott",
+    link: "/articles/ai-chatbots-customer-service",
+  },
+];

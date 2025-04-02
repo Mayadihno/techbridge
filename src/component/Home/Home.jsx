@@ -4,6 +4,7 @@ import Mission from "./Mission";
 import Services from "./Services";
 import Portfolio from "./Portfolio";
 import Testimonial from "./Testimonial";
+import Article from "./Article";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Services />
       <Portfolio />
       <Testimonial />
+      <Article />
     </React.Fragment>
   );
 };
