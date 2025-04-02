@@ -486,3 +486,87 @@ export const article = [
     link: "/articles/ai-chatbots-customer-service",
   },
 ];
+
+export const events = [
+  {
+    promotionalEvents: [
+      {
+        id: 1,
+        title: "TechBridge Innovation Summit 2025",
+        description:
+          "A conference showcasing cutting-edge software solutions and emerging tech trends.",
+        date: "2025-03-10",
+        location: "San Francisco, CA",
+        images: [
+          "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg",
+          "https://images.pexels.com/photos/3183161/pexels-photo-3183161.jpeg",
+          "https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg",
+        ],
+      },
+      {
+        id: 2,
+        title: "AI & Machine Learning Expo",
+        description:
+          "An event where industry leaders discuss the latest developments in artificial intelligence.",
+        date: "2025-02-15",
+        location: "New York, NY",
+        images: [
+          "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg",
+          "https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg",
+          "https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg",
+        ],
+      },
+      {
+        id: 3,
+        title: "Cybersecurity Awareness Workshop",
+        description:
+          "An interactive workshop focused on modern cybersecurity threats and prevention strategies.",
+        date: "2025-01-28",
+        location: "Los Angeles, CA",
+        images: [
+          "https://images.pexels.com/photos/5380665/pexels-photo-5380665.jpeg",
+          "https://images.pexels.com/photos/5380666/pexels-photo-5380666.jpeg",
+          "https://images.pexels.com/photos/5380667/pexels-photo-5380667.jpeg",
+        ],
+      },
+    ],
+    upcomingEvents: [
+      {
+        id: 4,
+        title: "Cloud Computing & DevOps Conference",
+        description:
+          "Join experts discussing the future of cloud infrastructure and DevOps methodologies.",
+        date: "2025-06-20",
+        location: "Seattle, WA",
+        images: [
+          "https://images.pexels.com/photos/1181317/pexels-photo-1181317.jpeg",
+          "https://images.pexels.com/photos/1181320/pexels-photo-1181320.jpeg",
+        ],
+      },
+      {
+        id: 5,
+        title: "TechBridge Global Hackathon",
+        description:
+          "A 48-hour coding challenge where developers and innovators build groundbreaking applications.",
+        date: "2025-07-10",
+        location: "London, UK",
+        images: [
+          "https://images.pexels.com/photos/1181345/pexels-photo-1181345.jpeg",
+          "https://images.pexels.com/photos/1181346/pexels-photo-1181346.jpeg",
+        ],
+      },
+      {
+        id: 6,
+        title: "Fintech & Blockchain Symposium",
+        description:
+          "Exploring the latest trends in financial technology and blockchain applications.",
+        date: "2025-08-05",
+        location: "Dubai, UAE",
+        images: [
+          "https://images.pexels.com/photos/1181351/pexels-photo-1181351.jpeg",
+          "https://images.pexels.com/photos/1181352/pexels-photo-1181352.jpeg",
+        ],
+      },
+    ],
+  },
+];

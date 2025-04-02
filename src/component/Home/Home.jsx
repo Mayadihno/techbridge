@@ -5,6 +5,7 @@ import Services from "./Services";
 import Portfolio from "./Portfolio";
 import Testimonial from "./Testimonial";
 import Article from "./Article";
+import Events from "./Events";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Portfolio />
       <Testimonial />
       <Article />
+      <Events />
     </React.Fragment>
   );
 };
