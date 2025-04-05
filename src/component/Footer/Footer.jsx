@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
   return (
     <React.Fragment>
       <div className="bg-[#303E4B] py-10 text-white">
@@ -43,7 +45,10 @@ const Footer = () => {
             {/* Contact */}
             <div className="w-[30%]">
               <h4 className="text-xl font-semibold mb-4">Contact Us</h4>
-              <button className="mt-2 cursor-pointer border border-blue-500 hover:bg-blue-700 hover:text-white text-blue-400 font-semibold uppercase px-6 py-2 rounded-full transition duration-300">
+              <button
+                onClick={() => navigate("/contact")}
+                className="mt-2 cursor-pointer border border-blue-500 hover:bg-blue-700 hover:text-white text-blue-400 font-semibold uppercase px-6 py-2 rounded-full transition duration-300"
+              >
                 Contact Us
               </button>
             </div>

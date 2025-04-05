@@ -1,8 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { navbarData } from "./data";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <nav className="bg-white text-gray-900 p-4 sticky top-0 z-50 shadow-md w-full">
       <div className="w-[90%] mx-auto flex justify-between items-center">
@@ -25,7 +26,10 @@ const Navbar = () => {
         </ul>
 
         <div className="newsreader">
-          <button className="border uppercase border-blue-500 hover:text-white cursor-pointer text-gray-500 hover:bg-blue-700 font-bold py-3 px-5 rounded-[30px] focus:outline-none focus:shadow-outline">
+          <button
+            onClick={() => navigate("/contact")}
+            className="border uppercase border-blue-500 hover:text-white cursor-pointer text-gray-500 hover:bg-blue-700 font-bold py-3 px-5 rounded-[30px] focus:outline-none focus:shadow-outline"
+          >
             Contact Us
           </button>
         </div>

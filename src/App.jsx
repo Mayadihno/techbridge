@@ -4,6 +4,7 @@ import ScrollToTop from "./static/ScrollTop";
 import Navbar from "./component/Navbar/Navbar";
 import Home from "./component/Home/Home";
 import Footer from "./component/Footer/Footer";
+import Contact from "./component/contact/Contact";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </>
