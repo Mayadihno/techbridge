@@ -213,26 +213,29 @@ export const portfolio = [
   {
     id: 7,
     header: "Retail",
-    image: "https://yalantis.com/wp-content/uploads/2025/02/retail-1.webp",
+    image:
+      "https://images.pexels.com/photos/19242073/pexels-photo-19242073/free-photo-of-view-of-an-escalator-and-stores-in-a-shopping-mall.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     text: "We enhance customer experiences and operational efficiency through AI-driven analytics, personalized shopping, and seamless omnichannel integration.",
   },
   {
     id: 8,
     header: "Media & entertainment",
     image:
-      "https://yalantis.com/wp-content/uploads/2025/02/media-and-entertainment-1.webp",
+      "https://images.pexels.com/photos/2773557/pexels-photo-2773557.jpeg?auto=compress&cs=tinysrgb&w=600",
     text: "Our solutions empower media and entertainment companies with data-driven insights, content personalization, and immersive experiences to engage audiences effectively.",
   },
   {
     id: 9,
     header: "Real estate",
-    image: "https://yalantis.com/wp-content/uploads/2025/02/real-estate-1.webp",
+    image:
+      "https://images.pexels.com/photos/31370888/pexels-photo-31370888/free-photo-of-orange-model-house-among-black-miniatures.jpeg?auto=compress&cs=tinysrgb&w=600",
     text: "We develop innovative solutions for real estate management, property analytics, and virtual tours, enhancing decision-making and user experiences.",
   },
   {
     id: 10,
     header: "Telecom",
-    image: "https://yalantis.com/wp-content/uploads/2025/02/telecom-1.webp",
+    image:
+      "https://images.pexels.com/photos/2415405/pexels-photo-2415405.jpeg?auto=compress&cs=tinysrgb&w=600",
     text: "Our telecom solutions optimize network performance, enhance customer experiences, and enable seamless communication through advanced analytics and IoT integration.",
   },
 ];

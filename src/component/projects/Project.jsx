@@ -1,20 +1,23 @@
 import React from "react";
 import { portfolio } from "../../static/bannerData";
-import { useNavigate } from "react-router-dom";
 
-const Portfolio = () => {
-  const data = portfolio.slice(0, 6);
-
-  const navigate = useNavigate();
+const Project = () => {
   return (
     <React.Fragment>
-      <div className="w-[88%] mx-auto newsreader mb-10">
-        <h2 className="text-3xl mb-3 font-bold text-[#000]">
-          Techbridges’ solutions across industries{" "}
-        </h2>
-
+      <div className=" bg-[#1C1E24] w-full py-6 text-center text-white">
+        <h3 className=" text-5xl text-[#FF6300] font-bold w-[25%] mx-auto pt-3">
+          Our Projects
+        </h3>
+        <p className="text-base font-medium w-[55%] mx-auto newsreader pt-4">
+          Our projects are a reflection of our dedication to delivering
+          excellence. From innovative solutions to impactful initiatives, we
+          take pride in every endeavor we undertake. Explore our portfolio to
+          witness the transformative power of our work.
+        </p>
+      </div>
+      <div className="w-[85%] mx-auto newsreader my-10">
         <div className="grid grid-cols-3 gap-x-6 gap-y-7">
-          {data.map((item) => {
+          {portfolio.map((item) => {
             return (
               <div
                 key={item.id}
@@ -48,17 +51,9 @@ const Portfolio = () => {
             );
           })}
         </div>
-        <div className="flex justify-center mt-8">
-          <button
-            onClick={() => navigate("/projects")}
-            className="px-8 py-3 bg-[#FF6300] cursor-pointer text-white font-semibold rounded-md hover:bg-[#dc143cb7] transition duration-300"
-          >
-            View More
-          </button>
-        </div>
       </div>
     </React.Fragment>
   );
 };
 
-export default Portfolio;
+export default Project;
