@@ -1,18 +1,24 @@
 import React from "react";
 import { article } from "../../static/bannerData";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Article() {
-  const data = article.slice(0, 6);
-  const navigate = useNavigate();
+const Articule = () => {
   return (
-    <div className="py-12 bg-gray-100">
-      <section className=" w-[88%] mx-auto">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-10">
-          Latest Insights from TechBridge
-        </h2>
+    <React.Fragment>
+      <div className=" bg-[#1C1E24] w-full py-6 text-center text-white">
+        <h3 className=" text-5xl text-[#FF6300] font-bold w-[25%] mx-auto pt-3">
+          Techbridge Insights
+        </h3>
+        <p className="text-base font-medium w-[55%] mx-auto newsreader pt-4">
+          Techbridge Insights bring you the latest in digital product
+          development for the BFSI industry and beyond, featuring expert
+          opinions from our team of experts as well as thought leaders in the
+          field.
+        </p>
+      </div>
+      <div className="w-[85%] mx-auto my-12">
         <div className="grid md:grid-cols-3 gap-8">
-          {data.map((article) => (
+          {article.map((article) => (
             <div
               key={article.id}
               className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
@@ -49,17 +55,9 @@ function Article() {
             </div>
           ))}
         </div>
-        <div className="flex justify-center mt-8">
-          <button
-            onClick={() => navigate("/article")}
-            className="px-8 py-3 bg-[#FF6300] cursor-pointer text-white font-semibold rounded-md hover:bg-[#dc143cb7] transition duration-300"
-          >
-            View More
-          </button>
-        </div>
-      </section>
-    </div>
+      </div>
+    </React.Fragment>
   );
-}
+};
 
-export default Article;
+export default Articule;
