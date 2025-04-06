@@ -10,6 +10,8 @@ import Project from "./component/projects/Project";
 import Articule from "./component/article/Articule";
 import Events from "./component/events/Events";
 import Event from "./component/events/Events";
+import PRoute from "./component/protected/Proute";
+import Dashboard from "./component/admin/Dashboard";
 
 function App() {
   return (
@@ -23,6 +25,9 @@ function App() {
         <Route path="/projects" element={<Project />} />
         <Route path="/articles" element={<Articule />} />
         <Route path="/events" element={<Event />} />
+        <Route path="/*" element={<PRoute />}>
+          <Route path="admin-dashboard" element={<Dashboard />} />
+        </Route>
       </Routes>
       <Footer />
     </>
