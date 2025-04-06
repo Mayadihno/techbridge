@@ -8,7 +8,7 @@ function Article() {
   return (
     <div className="py-12 bg-gray-100">
       <section className=" w-[88%] mx-auto">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-10">
+        <h2 className="md:text-4xl text-xl font-bold text-center text-gray-800 mb-10">
           Latest Insights from TechBridge
         </h2>
         <div className="grid md:grid-cols-3 gap-8">

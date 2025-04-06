@@ -38,11 +38,11 @@ const Banner = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-transparent"></div>
 
               {/* Text Content */}
-              <div className="relative z-10 ml-28 space-y-4">
-                <h4 className="text-6xl font-bold pb-4 w-[70%] text-[#FF6300]">
+              <div className="relative z-10 md:ml-28 ml-4 space-y-4">
+                <h4 className="md:text-6xl text-2xl font-bold pb-4 md:w-[70%] w-full text-[#FF6300]">
                   {item.title}
                 </h4>
-                <h3 className="text-2xl font-[400] w-[70%] leading-9 newsreader">
+                <h3 className="md:text-2xl text-base font-[400] md:w-[70%] w-full leading-9 newsreader">
                   {item.description}
                 </h3>
                 <div className="mt-6">

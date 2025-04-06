@@ -30,12 +30,12 @@ const Dashboard = () => {
 
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
-      <div className="w-[85%] mx-auto">
+      <div className="md:w-[85%] w-full mx-auto">
         <h2 className="text-2xl font-semibold mb-4 text-center">
           Admin Dashboard
         </h2>
 
-        <div className="bg-white w-[30%] mx-auto text-center newsreader shadow-md rounded-md p-4 mb-6">
+        <div className="bg-white md:w-[30%] w-full mx-auto text-center newsreader shadow-md rounded-md p-4 mb-6">
           <p className="text-lg">
             Total Customer Feedback:{" "}
             <span className="font-bold text-blue-600">{feedbacks.length}</span>

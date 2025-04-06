@@ -8,12 +8,12 @@ const Portfolio = () => {
   const navigate = useNavigate();
   return (
     <React.Fragment>
-      <div className="w-[88%] mx-auto newsreader mb-10">
-        <h2 className="text-3xl mb-3 font-bold text-[#000]">
+      <div className="md:w-[88%] w-[95%] mx-auto newsreader mb-10">
+        <h2 className="md:text-3xl text-xl mb-3 font-bold text-[#000]">
           Techbridges’ solutions across industries{" "}
         </h2>
 
-        <div className="grid grid-cols-3 gap-x-6 gap-y-7">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-x-6 gap-y-7">
           {data.map((item) => {
             return (
               <div

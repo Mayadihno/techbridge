@@ -8,24 +8,24 @@ import { componies } from "../../static/bannerData";
 const Mission = () => {
   return (
     <React.Fragment>
-      <div className="w-[88%] mx-auto my-16 newsreader">
-        <div className=" flex justify-between items-center">
-          <div className="w-1/2 h-fit">
+      <div className="md:w-[88%] w-[95%] mx-auto md:my-16 my-5 newsreader">
+        <div className="flex justify-between md:flex-row flex-col-reverse items-center">
+          <div className="md:w-1/2 w-full h-fit">
             <img
               src="https://www.fingent.com/wp-content/uploads/Home-page-img-02.webp"
               alt=""
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="w-1/2">
-            <h2 className="text-3xl font-bold text-[#000] leading-[50px] newsreader">
+          <div className="md:w-1/2 w-full pb-10 md:pb-0">
+            <h2 className="md:text-3xl text-xl font-bold text-[#000] md:leading-[50px] newsreader">
               We Are TechBridge, We Build{" "}
               <span className="text-[#1E90FF] newsreader">
                 Innovative Software Solutions
               </span>{" "}
               To Drive Business Success
             </h2>
-            <p className="mt-4 text-lg text-gray-700 leading-10">
+            <p className="mt-4 md:text-lg text-sm text-gray-700 md:leading-10 leading-8">
               TechBridge is your trusted partner in digital transformation. We
               specialize in developing mission-critical software solutions,
               enabling businesses to scale with cutting-edge technologies. From
@@ -39,7 +39,7 @@ const Mission = () => {
         </div>
       </div>
       <div className="my-6">
-        <h3 className="text-3xl font-bold text-center text-[#FF6300] leading-[50px] newsreader">
+        <h3 className="md:text-3xl text-xl font-bold text-center text-[#FF6300] md:leading-[50px] newsreader">
           TechBridge is trusted by over 400+ clients served worldwide
         </h3>
         <div className="">
@@ -49,7 +49,7 @@ const Mission = () => {
               disableOnInteraction: false,
             }}
             breakpoints={{
-              320: { slidesPerView: 4, spaceBetween: 10 },
+              320: { slidesPerView: 3, spaceBetween: 10 },
               640: { slidesPerView: 4, spaceBetween: 15 },
               768: { slidesPerView: 6, spaceBetween: 20 },
               1024: { slidesPerView: 6, spaceBetween: 5 },

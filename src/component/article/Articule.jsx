@@ -6,17 +6,17 @@ const Articule = () => {
   return (
     <React.Fragment>
       <div className=" bg-[#1C1E24] w-full py-6 text-center text-white">
-        <h3 className=" text-5xl text-[#FF6300] font-bold w-[25%] mx-auto pt-3">
+        <h3 className="md:text-5xl text-2xl text-[#FF6300] font-bold md:w-[25%] w-full mx-auto pt-3">
           Techbridge Insights
         </h3>
-        <p className="text-base font-medium w-[55%] mx-auto newsreader pt-4">
+        <p className="text-base font-medium md:w-[55%] w-[95%] mx-auto newsreader pt-4">
           Techbridge Insights bring you the latest in digital product
           development for the BFSI industry and beyond, featuring expert
           opinions from our team of experts as well as thought leaders in the
           field.
         </p>
       </div>
-      <div className="w-[85%] mx-auto my-12">
+      <div className="md:w-[85%] w-[95%] mx-auto my-6 md:my-12">
         <div className="grid md:grid-cols-3 gap-8">
           {article.map((article) => (
             <div

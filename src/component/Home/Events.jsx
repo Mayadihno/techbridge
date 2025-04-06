@@ -76,10 +76,10 @@ const Events = () => {
         {/* Modal */}
         {selectedEvent && (
           <div className="fixed inset-0 bg-black/30 bg-opacity-70 flex justify-center items-center z-50">
-            <div className="bg-white rounded-lg p-6 w-[90%] md:w-[60%] lg:w-[50%] max-h-[90vh] overflow-y-auto">
+            <div className="bg-white rounded-lg p-6 w-[95%] md:w-[60%] lg:w-[50%] max-h-[90vh] overflow-y-auto">
               {/* Modal Header */}
               <div className="flex justify-between items-center border-b pb-3">
-                <h3 className="text-xl font-bold">
+                <h3 className="md:text-xl text-sm font-bold">
                   {selectedEvent.title} - Images
                 </h3>
                 <button

@@ -7,25 +7,33 @@ import { Autoplay } from "swiper/modules";
 
 const Services = () => {
   const [active, setActive] = useState(1);
+  const [accordionOpen, setAccordionOpen] = useState(null);
+
+  const handleAccordionToggle = (id) => {
+    setAccordionOpen(accordionOpen === id ? null : id);
+    setActive(id);
+  };
   return (
     <React.Fragment>
-      <div className="bg-[#F5F5F5] my-16 p-8 rounded-lg">
-        <div className="mx-auto w-[88%]">
-          <h2 className="text-5xl font-semibold text-center newsreader leading-[50px] mb-12">
+      <div className="bg-[#F5F5F5] my-16 md:p-8 p-4 rounded-lg">
+        <div className="mx-auto md:w-[88%] w-full">
+          <h2 className="md:text-5xl text-2xl font-semibold text-center newsreader md:leading-[50px] mb-6 md:mb-12">
             <span className="text-[#FF6300]">Services</span> offered by
             Techbridge
           </h2>
-          <div className="flex justify-between">
+
+          {/* Desktop Layout */}
+          <div className="hidden md:flex justify-between">
             <div className="flex flex-col bg-white w-[30%] newsreader">
               {services.map((item) => (
                 <div
                   key={item.id}
+                  onClick={() => setActive(item.id)}
                   className={`p-[41px] flex items-center cursor-pointer transition-transform duration-300 hover:scale-105 ${
                     active === item.id
-                      ? "border-b-2 border-[#FF6300] shadow-lg bg-gray-100 "
+                      ? "border-b-2 border-[#FF6300] shadow-lg bg-gray-100"
                       : "border-b-4 border-transparent"
                   }`}
-                  onClick={() => setActive(item.id)}
                 >
                   <img
                     src={item.icon}
@@ -45,131 +53,40 @@ const Services = () => {
               ))}
             </div>
             <div className="w-[70%] ml-10">
-              {active === 1 && (
-                <div>
-                  <h2 className="text-3xl cursor-pointer ease-in transition duration-200 font-semibold hover:text-[#FF6300] text-[#000] leading-[50px] newsreader">
-                    Custom software development
-                  </h2>
-                  <p className="mt-4 text-lg text-gray-700 leading-10">
-                    Build tailored software solutions that scale and evolve
-                    along with your business goals. Establish long-term
-                    partnerships with our team of committed software developers
-                    through technical excellence and a transparent development
-                    process.
-                  </p>
-                  <button className="uppercase bg-[#FF6300] mt-5 text-white cursor-pointer  hover:bg-[#ff6200ab] font-bold py-3 px-5 rounded-[30px] focus:outline-none focus:shadow-outline">
-                    Learn More
-                  </button>
-
-                  <div className="w-full h-[400px] mt-6">
-                    <img
-                      src="https://yalantis.com/wp-content/uploads/2025/03/Custom-software-development.png"
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              )}
-              {active === 2 && (
-                <div>
-                  <h2 className="text-3xl cursor-pointer ease-in transition duration-200 font-semibold hover:text-[#FF6300] text-[#000] leading-[50px] newsreader">
-                    Dedicated development teams
-                  </h2>
-                  <p className="mt-4 text-lg text-gray-700 leading-10">
-                    Boost capacity of your in-house team with our dedicated
-                    developers and tech specialists, while PMP-certified
-                    managers ensure transparent communication and a commitment
-                    to long-term success.
-                  </p>
-                  <button className="uppercase bg-[#FF6300] mt-5 text-white cursor-pointer  hover:bg-[#ff6200ab] font-bold py-3 px-5 rounded-[30px] focus:outline-none focus:shadow-outline">
-                    Learn More
-                  </button>
-
-                  <div className="w-full h-[400px] mt-6">
-                    <img
-                      src="https://yalantis.com/wp-content/uploads/2025/03/Development-Team-Augmentation.png"
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              )}
-              {active === 3 && (
-                <div>
-                  <h2 className="text-3xl cursor-pointer ease-in transition duration-200 font-semibold hover:text-[#FF6300] text-[#000] leading-[50px] newsreader">
-                    IT consulting
-                  </h2>
-                  <p className="mt-4 text-lg text-gray-700 leading-10">
-                    Get a clear roadmap for your digital transformation with our
-                    seasoned consultants and business analysts. Optimize your
-                    current processes and implement new solutions for business
-                    growth.
-                  </p>
-                  <button className="uppercase bg-[#FF6300] mt-5 text-white cursor-pointer  hover:bg-[#ff6200ab] font-bold py-3 px-5 rounded-[30px] focus:outline-none focus:shadow-outline">
-                    Learn More
-                  </button>
-
-                  <div className="w-full h-[400px] mt-6">
-                    <img
-                      src="https://yalantis.com/wp-content/uploads/2025/03/IT-consulting-services.png"
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              )}
-              {active === 4 && (
-                <div>
-                  <h2 className="text-3xl cursor-pointer ease-in transition duration-200 font-semibold hover:text-[#FF6300] text-[#000] leading-[50px] newsreader">
-                    Digital transformation
-                  </h2>
-                  <p className="mt-4 text-lg text-gray-700 leading-10">
-                    Gain the competitive edge over business rivals and transform
-                    your business with the assistance of our AI, IoT, and
-                    automation experts.
-                  </p>
-                  <button className="uppercase bg-[#FF6300] mt-5 text-white cursor-pointer  hover:bg-[#ff6200ab] font-bold py-3 px-5 rounded-[30px] focus:outline-none focus:shadow-outline">
-                    Learn More
-                  </button>
-
-                  <div className="w-full h-[400px] mt-6">
-                    <img
-                      src="https://yalantis.com/wp-content/uploads/2025/03/Digital-Transformation.png"
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              )}
-              {active === 5 && (
-                <div>
-                  <h2 className="text-3xl cursor-pointer ease-in transition duration-200 font-semibold hover:text-[#FF6300] text-[#000] leading-[50px] newsreader">
-                    Staff augmentation
-                  </h2>
-                  <p className="mt-4 text-lg text-gray-700 leading-10">
-                    Replenish your teams with pre-vetted, highly skilled
-                    professionals who bring deep technical expertise and a
-                    problem-solving mindset. Our transparent and efficient
-                    process ensures the right talent for your needs.
-                  </p>
-                  <button className="uppercase bg-[#FF6300] mt-5 text-white cursor-pointer  hover:bg-[#ff6200ab] font-bold py-3 px-5 rounded-[30px] focus:outline-none focus:shadow-outline">
-                    Learn More
-                  </button>
-
-                  <div className="w-full h-[400px] mt-6">
-                    <img
-                      src="https://yalantis.com/wp-content/uploads/2025/03/Staff-Augmentation.png"
-                      alt=""
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              )}
+              {/* Render full content here */}
+              {renderContent(active)}
             </div>
           </div>
+
+          {/* Mobile Accordion Layout */}
+          <div className="md:hidden">
+            {services.map((item) => (
+              <div key={item.id} className="mb-4 rounded-md shadow-sm">
+                <button
+                  onClick={() => handleAccordionToggle(item.id)}
+                  className="w-full flex items-center justify-between p-4 bg-gray-100"
+                >
+                  <div className="flex items-center">
+                    <img
+                      src={item.icon}
+                      alt={item.name}
+                      className="w-6 h-6 mr-3"
+                    />
+                    <span className="font-semibold text-gray-800">
+                      {item.name}
+                    </span>
+                  </div>
+                  <span>{accordionOpen === item.id ? "−" : "+"}</span>
+                </button>
+                {accordionOpen === item.id && (
+                  <div className="p-4 bg-white">{renderContent(item.id)}</div>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="my-10 mx-auto w-[88%]">
-          <h3 className="text-3xl mb-3 pt-10 font-bold text-[#000]">
+        <div className="my-10 mx-auto md:w-[88%] w-full">
+          <h3 className="md:text-3xl text-xl mb-3 pt-10 font-bold text-[#000]">
             Techbridge scope of expertise
           </h3>
           <div className="">
@@ -229,3 +146,116 @@ const Services = () => {
 };
 
 export default Services;
+
+const renderContent = (id) => {
+  switch (id) {
+    case 1:
+      return (
+        <div>
+          <h2 className="text-2xl font-semibold text-[#000] mb-4">
+            Custom software development
+          </h2>
+          <p className="text-gray-700 leading-7 mb-4">
+            Build tailored software solutions that scale and evolve along with
+            your business goals. Establish long-term partnerships with our team
+            of committed software developers through technical excellence and a
+            transparent development process.
+          </p>
+          <button className="uppercase bg-[#FF6300] mt-2 text-white font-bold py-2 px-4 rounded-full">
+            Learn More
+          </button>
+          <img
+            src="https://yalantis.com/wp-content/uploads/2025/03/Custom-software-development.png"
+            alt=""
+            className="w-full md:h-[456px] h-[250px] mt-4 md:object-cover object-contain"
+          />
+        </div>
+      );
+    case 2:
+      return (
+        <div>
+          <h2 className="text-2xl font-semibold text-[#000] mb-4">
+            Dedicated development teams
+          </h2>
+          <p className="text-gray-700 leading-7 mb-4">
+            Boost capacity of your in-house team with our dedicated developers
+            and tech specialists, while PMP-certified managers ensure
+            transparent communication and a commitment to long-term success.
+          </p>
+          <button className="uppercase bg-[#FF6300] mt-2 text-white font-bold py-2 px-4 rounded-full">
+            Learn More
+          </button>
+          <img
+            src="https://yalantis.com/wp-content/uploads/2025/03/Development-Team-Augmentation.png"
+            alt=""
+            className="w-full md:h-[456px] h-[250px] mt-4 md:object-cover object-contain"
+          />
+        </div>
+      );
+    case 3:
+      return (
+        <div>
+          <h2 className="text-2xl font-semibold text-[#000] mb-4">
+            IT consulting
+          </h2>
+          <p className="text-gray-700 leading-7 mb-4">
+            Get a clear roadmap for your digital transformation with our
+            seasoned consultants and business analysts. Optimize your current
+            processes and implement new solutions for business growth.
+          </p>
+          <button className="uppercase bg-[#FF6300] mt-2 text-white font-bold py-2 px-4 rounded-full">
+            Learn More
+          </button>
+          <img
+            src="https://yalantis.com/wp-content/uploads/2025/03/IT-consulting-services.png"
+            alt=""
+            className="w-full md:h-[456px] h-[250px] mt-4 md:object-cover object-contain"
+          />
+        </div>
+      );
+    case 4:
+      return (
+        <div>
+          <h2 className="text-2xl font-semibold text-[#000] mb-4">
+            Digital transformation
+          </h2>
+          <p className="text-gray-700 leading-7 mb-4">
+            Gain the competitive edge over business rivals and transform your
+            business with the assistance of our AI, IoT, and automation experts.
+          </p>
+          <button className="uppercase bg-[#FF6300] mt-2 text-white font-bold py-2 px-4 rounded-full">
+            Learn More
+          </button>
+          <img
+            src="https://yalantis.com/wp-content/uploads/2025/03/Digital-Transformation.png"
+            alt=""
+            className="w-full md:h-[456px] h-[250px] mt-4 md:object-cover object-contain"
+          />
+        </div>
+      );
+    case 5:
+      return (
+        <div>
+          <h2 className="text-2xl font-semibold text-[#000] mb-4">
+            Staff augmentation
+          </h2>
+          <p className="text-gray-700 leading-7 mb-4">
+            Replenish your teams with pre-vetted, highly skilled professionals
+            who bring deep technical expertise and a problem-solving mindset.
+            Our transparent and efficient process ensures the right talent for
+            your needs.
+          </p>
+          <button className="uppercase bg-[#FF6300] mt-2 text-white font-bold py-2 px-4 rounded-full">
+            Learn More
+          </button>
+          <img
+            src="https://yalantis.com/wp-content/uploads/2025/03/Staff-Augmentation.png"
+            alt=""
+            className="w-full md:h-[456px] h-[250px] mt-4 md:object-cover object-contain"
+          />
+        </div>
+      );
+    default:
+      return null;
+  }
+};

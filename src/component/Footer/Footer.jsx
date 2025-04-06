@@ -40,10 +40,10 @@ const Footer = () => {
   return (
     <React.Fragment>
       <div className="bg-[#303E4B] py-10 text-white">
-        <div className="w-[85%] mx-auto">
+        <div className="md:w-[85%] w-[90%] mx-auto">
           <div className="grid grid-cols-1 gap-12 md:flex md:justify-between">
             {/* About */}
-            <div className="w-[40%]">
+            <div className="md:w-[40%] w-full">
               <div className="flex items-center space-x-2">
                 <div className="text-[#FF6300] newsreader font-bold text-2xl py-1">
                   Tech<span className="text-blue-600">Bridge</span>
@@ -58,7 +58,7 @@ const Footer = () => {
             </div>
 
             {/* Explore */}
-            <div className="w-[30%] ml-30">
+            <div className="md:w-[30%] w-full md:ml-30">
               <h4 className="text-xl font-semibold mb-4">Explore</h4>
               <ul className="space-y-4 text-gray-300 text-base font-semibold">
                 <li className="hover:text-white cursor-pointer transition">
@@ -83,7 +83,7 @@ const Footer = () => {
             </div>
 
             {/* Contact */}
-            <div className="w-[30%]">
+            <div className="md:w-[30%] w-full">
               <h4 className="text-xl font-semibold mb-4">Contact Us</h4>
               <button
                 onClick={() => navigate("/contact")}

@@ -5,18 +5,18 @@ const Project = () => {
   return (
     <React.Fragment>
       <div className=" bg-[#1C1E24] w-full py-6 text-center text-white">
-        <h3 className=" text-5xl text-[#FF6300] font-bold w-[25%] mx-auto pt-3">
+        <h3 className="md:text-5xl text-2xl text-[#FF6300] font-bold md:w-[25%] w-full mx-auto pt-3">
           Our Projects
         </h3>
-        <p className="text-base font-medium w-[55%] mx-auto newsreader pt-4">
+        <p className="text-base font-medium md:w-[55%] w-[95%] mx-auto newsreader pt-4">
           Our projects are a reflection of our dedication to delivering
           excellence. From innovative solutions to impactful initiatives, we
           take pride in every endeavor we undertake. Explore our portfolio to
           witness the transformative power of our work.
         </p>
       </div>
-      <div className="w-[85%] mx-auto newsreader my-10">
-        <div className="grid grid-cols-3 gap-x-6 gap-y-7">
+      <div className="md:w-[85%] w-[95%] mx-auto newsreader my-10">
+        <div className="grid md:grid-cols-3 grid-cols-1 gap-x-6 gap-y-7">
           {portfolio.map((item) => {
             return (
               <div

@@ -72,14 +72,14 @@ const Contact = () => {
   };
   return (
     <React.Fragment>
-      <div className="bg-[#F8F5F2] p-6">
-        <div className="w-[88%] mx-auto">
-          <div className=" text-center">
+      <div className="bg-[#F8F5F2] md:p-6 p-3">
+        <div className="md:w-[88%] w-[96%] mx-auto">
+          <div className=" text-center md:pt-0 pt-5">
             <h3 className="text-2xl text-neutral-400 font-bold">Contact Us</h3>
-            <h5 className="text-5xl w-[55%] mx-auto font-semibold newsreader pt-4">
+            <h5 className="md:text-5xl text-2xl md:w-[55%] w-full mx-auto font-semibold newsreader pt-4">
               Ready to achieve your vision? We're here to help.
             </h5>
-            <p className="text-base font-medium w-[45%] mx-auto pt-2">
+            <p className="text-base font-medium md:w-[45%] w-full mx-auto pt-2">
               We'd love to start a conversation. Fill out the form and we'll
               connect you with the right person.
             </p>

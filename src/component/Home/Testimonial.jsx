@@ -8,8 +8,8 @@ import { testimonial } from "../../static/bannerData";
 const Testimonial = () => {
   return (
     <React.Fragment>
-      <div className="w-[88%] mx-auto my-16">
-        <h3 className="text-5xl mb-8 text-center font-bold ">
+      <div className="md:w-[88%] w-[95%] mx-auto md:my-16 my-6">
+        <h3 className="md:text-5xl text-xl mb-8 text-center font-bold ">
           Testimonials from our clients
         </h3>
         <div className="">
@@ -31,16 +31,16 @@ const Testimonial = () => {
             {testimonial.map((item) => {
               return (
                 <SwiperSlide key={item.id}>
-                  <div className="flex  justify-between border border-gray-300 rounded-2xl cursor-pointer">
-                    <div className="w-1/2 h-[350px]">
+                  <div className="flex flex-col md:flex-row justify-between border border-gray-300 rounded-2xl cursor-pointer">
+                    <div className="md:w-1/2 w-full h-[350px] ">
                       <img
                         src={item.image}
                         className=" w-full h-full object-cover rounded-tl-2xl rounded-bl-2xl"
                       />
                     </div>
-                    <div className="w-1/2 ml-5 pt-5 px-2 relative">
-                      <h4 className="text-lg">{item.text}</h4>
-                      <div className=" absolute bottom-0 left-0 pt-4 pb-2">
+                    <div className="md:w-1/2 w-full md:h-[350px] h-[210px] md:ml-5 pt-5 px-2 relative">
+                      <h4 className="md:text-lg text-sm">{item.text}</h4>
+                      <div className=" absolute md:bottom-0 md:left-0 left-2 pt-4 pb-2">
                         <p className="text-sm font-semibold text-[#FF6300] mt-2">
                           {item.name}
                         </p>
