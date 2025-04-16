@@ -1,20 +1,28 @@
 import React, { useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
-import { db } from "../../firebase/firebaseConfig";
+import { collection, getDocs, orderBy, query } from "firebase/firestore";
+import { auth, db } from "../../firebase/firebaseConfig";
 import { ICONS } from "../../static/icons";
+import { signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
   const [feedbacks, setFeedbacks] = useState([]);
   const [activeCard, setActiveCard] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchFeedbacks = async () => {
       try {
-        const querySnapshot = await getDocs(collection(db, "customerFeedback"));
+        const q = query(
+          collection(db, "customerFeedback"),
+          orderBy("timestamp", "desc")
+        );
+        const querySnapshot = await getDocs(q);
         const data = querySnapshot.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
+
         setFeedbacks(data);
       } catch (error) {
         console.error("Error fetching feedback:", error);
@@ -28,12 +36,31 @@ const Dashboard = () => {
     setActiveCard((prevId) => (prevId === id ? null : id));
   };
 
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
+      localStorage.removeItem("accessToken");
+      navigate("/", { replace: true });
+    } catch (error) {
+      console.error("Logout error:", error);
+    }
+  };
+
   return (
     <div className="p-6 bg-gray-100 min-h-screen">
       <div className="md:w-[85%] w-full mx-auto">
-        <h2 className="text-2xl font-semibold mb-4 text-center">
-          Admin Dashboard
-        </h2>
+        {/* Header with Logout */}
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="text-2xl font-semibold text-center md:text-left w-full">
+            Admin Dashboard
+          </h2>
+          <button
+            onClick={handleLogout}
+            className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600"
+          >
+            Logout
+          </button>
+        </div>
 
         <div className="bg-white md:w-[30%] w-full mx-auto text-center newsreader shadow-md rounded-md p-4 mb-6">
           <p className="text-lg">

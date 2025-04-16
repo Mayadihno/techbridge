@@ -45,6 +45,8 @@ const Footer = () => {
       setLoading(false);
       setShow(false);
       navigate("/admin-dashboard", { replace: true });
+      setPassword("");
+      setEmail("");
       e.target.reset();
     } catch (error) {
       if (
@@ -119,7 +121,7 @@ const Footer = () => {
       </div>
       {show && (
         <div className="fixed w-full h-screen top-0 left-0 bg-[#00000030] z-80 flex justify-center items-center">
-          <div className="relative w-[95%] md:w-[30%] h-[40vh] md:h-[50vh] bg-white rounded-md p-4 shadow-sm md:mt-0 mt-[-50px]">
+          <div className="relative w-[95%] md:w-[30%] h-[40vh] md:h-[55vh] bg-white rounded-md p-4 shadow-sm md:mt-0 mt-[-50px]">
             <ICONS.close
               size={30}
               className="absolute cursor-pointer right-3 top-3 z-50"
