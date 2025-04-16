@@ -5,31 +5,38 @@ import { auth } from "../../firebase/firebaseConfig";
 import { ICONS } from "../../static/icons";
 
 const Footer = () => {
-  const [show, setShow] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [visible, setVisible] = useState(false);
-  const [error, setError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
   const [loading, setLoading] = useState(false);
-
+  const [visible, setVisible] = useState(false);
+  const [show, setShow] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError("");
 
-    // Basic validation
-    if (!email || !password) {
-      setError("Please fill in all fields.");
-      return;
+    // Reset error messages
+    setEmailError("");
+    setPasswordError("");
+
+    let isValid = true;
+
+    if (!email) {
+      setEmailError("Email is required");
+      isValid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setEmailError("Invalid email format");
+      isValid = false;
     }
 
-    // Simple email format validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      setError("Please enter a valid email address.");
-      return;
+    if (!password) {
+      setPasswordError("Password is required");
+      isValid = false;
     }
+
+    if (!isValid) return;
 
     setLoading(true);
     try {
@@ -44,9 +51,9 @@ const Footer = () => {
         error.code === "auth/wrong-password" ||
         error.code === "auth/user-not-found"
       ) {
-        setError("Incorrect Email or Password");
+        setPasswordError("Incorrect Email or Password");
       } else {
-        setError("Something went wrong. Please try again.");
+        setPasswordError("Something went wrong. Please try again.");
       }
       setLoading(false);
     }
@@ -112,26 +119,34 @@ const Footer = () => {
       </div>
       {show && (
         <div className="fixed w-full h-screen top-0 left-0 bg-[#00000030] z-80 flex justify-center items-center">
-          <div className="relative w-[95%] md:w-[30%] h-[40vh] md:h-[50vh] bg-white rounded-md p-4 shadow-sm md:mt-0 mt-[-50px] ">
+          <div className="relative w-[95%] md:w-[30%] h-[40vh] md:h-[50vh] bg-white rounded-md p-4 shadow-sm md:mt-0 mt-[-50px]">
             <ICONS.close
               size={30}
               className="absolute cursor-pointer right-3 top-3 z-50"
               onClick={() => setShow(false)}
             />
-
             <div className="pt-10">
               <h3 className="text-xl font-[500] text-center text-black">
                 Admin Login
               </h3>
+
               <form onSubmit={handleLogin} className="pt-4">
-                <input
-                  type="email"
-                  placeholder="Email"
-                  className="px-4 py-3 outline-none rounded-md shadow-sm bg-[#F5F5F4] w-full"
-                  name="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
+                {/* Email Field */}
+                <div>
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    className="px-4 py-3 outline-none rounded-md shadow-sm bg-[#F5F5F4] w-full"
+                    name="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  {emailError && (
+                    <p className="text-sm text-red-500 pt-1">{emailError}</p>
+                  )}
+                </div>
+
+                {/* Password Field */}
                 <div className="relative pt-6">
                   <input
                     type={!visible ? "password" : "text"}
@@ -155,15 +170,17 @@ const Footer = () => {
                       onClick={() => setVisible(true)}
                     />
                   )}
+                  {passwordError && (
+                    <p className="text-sm text-red-500 pt-1">{passwordError}</p>
+                  )}
                 </div>
-                {error && (
-                  <div className="text-red-500 text-sm py-1">{error}</div>
-                )}
+
+                {/* Options Row */}
                 <div className="flex justify-between items-center pt-2">
                   <div className="flex items-center">
                     <input
                       type="checkbox"
-                      name="checked"
+                      name="remember"
                       className="md:mt-1 mt-0 w-[15px] h-[15px]"
                     />
                     <p className="pl-2 md:text-sm text-xs">Remember me</p>
@@ -172,6 +189,8 @@ const Footer = () => {
                     Forget Password?
                   </h3>
                 </div>
+
+                {/* Submit Button */}
                 <div className="md:mt-5 mt-6 flex justify-center">
                   <button
                     type="submit"

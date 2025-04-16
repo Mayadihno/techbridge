@@ -51,7 +51,7 @@ function Article() {
         </div>
         <div className="flex justify-center mt-8">
           <button
-            onClick={() => navigate("/article")}
+            onClick={() => navigate("/articles")}
             className="px-8 py-3 bg-[#FF6300] cursor-pointer text-white font-semibold rounded-md hover:bg-[#dc143cb7] transition duration-300"
           >
             View More
