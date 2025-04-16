@@ -16,6 +16,21 @@ const Footer = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setError("");
+
+    // Basic validation
+    if (!email || !password) {
+      setError("Please fill in all fields.");
+      return;
+    }
+
+    // Simple email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
+
     setLoading(true);
     try {
       const user = await signInWithEmailAndPassword(auth, email, password);
@@ -30,13 +45,13 @@ const Footer = () => {
         error.code === "auth/user-not-found"
       ) {
         setError("Incorrect Email or Password");
-        setLoading(false);
       } else {
         setError("Something went wrong. Please try again.");
-        setLoading(false);
       }
+      setLoading(false);
     }
   };
+
   return (
     <React.Fragment>
       <div className="bg-[#303E4B] py-10 text-white">
